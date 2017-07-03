@@ -36,18 +36,18 @@ app.use(function(req, res, next) {
     }
 });
 
-app.get('/list', routesLists.getAll);
-app.get('/list/:id', routesLists.get);
-app.post('/list', routesLists.post);
-app.put('/list', routesLists.put);
-app.delete('/list/:id', routesLists.delete);
+app.get('/rest/list', routesLists.getAll);
+app.get('/rest/list/:id', routesLists.get);
+app.post('/rest/list', routesLists.post);
+app.put('/rest/list', routesLists.put);
+app.delete('/rest/list/:id', routesLists.delete);
 
-app.get('/list/:id/task', routesTask.getAll);
-app.post('/task', routesTask.post);
-app.put('/task', routesTask.put);
-app.delete('/task/:id', routesTask.delete);
-app.put('/task/:id/done/true', routesTask.done);
-app.put('/task/:id/done/false', routesTask.undone);
+app.get('/rest/list/:id/task', routesTask.getAll);
+app.post('/rest/task', routesTask.post);
+app.put('/rest/task', routesTask.put);
+app.delete('/rest/task/:id', routesTask.delete);
+app.put('/rest/task/:id/done/true', routesTask.done);
+app.put('/rest/task/:id/done/false', routesTask.undone);
 
 var router = express.Router();
 
